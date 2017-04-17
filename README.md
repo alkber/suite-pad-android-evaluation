@@ -67,6 +67,15 @@ Please refer the code for more information
   to NOTHING.
 * No extra libaries were used, 3 applications are pure Android DNA
 
+**Source Code Organisation** 
+
+There are 3 modules (intellj) 
+
+* /common       - library that is being shared accross the 3 project. It has some constants and utility functions.
+* /datastore    - data store service application 
+* /proxyserver  - proxy server service application
+* /presentation - android front end application
+
 **Questions** 
 
 What problems might faced if the requests originating from the Webview are 
