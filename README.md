@@ -13,6 +13,13 @@ There is a separation of concern ie ui deals only with ui so on.
 
 **Implementation Architecture on Android**
 
+Android facilities used 
+
+* Sync Adapter
+* Content Provider
+* Bound Service
+* Service
+
 These components so mentioned are separate applications (apk) and require 
 separate installation.  
 
@@ -33,7 +40,7 @@ data store service to retrieve the data and serialise it to json payload (as per
 the specification). 
 
 If the data is not available from the data store, proxy server would forward the
-request to load data from a remote url (https://api.myjson.com/bins/xefof).The 
+request to load data from a remote url (https://api.myjson.com/bins/xefof). The 
 json payload so received would be given as response for the current request.
  
 Since data is always available in the data store application, for the demo purpose
@@ -41,6 +48,14 @@ some means was required to emulate absence of data in the data store. In order t
 do that, a toggle button is provide in the presentation app. This toggle button 
 would toggle between the two emulation modes. This was done by communicating 
 with the proxy server via message brokers (interesting)...
+
+Local data would have the first item name as 
+
+* consectetur
+
+Remote data would have first item name as
+
+* Remote Data Proof
 
 Please refer the code for more information 
 
