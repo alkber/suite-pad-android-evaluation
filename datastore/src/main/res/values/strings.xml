@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SuitPad DataStore</string>
+    <string name="account_type">de.suitpad.datastore</string>
+    <string name="content_authority">de.suitpad.datastore</string>
+    <string name="data_file">data.json</string>
+
+</resources>

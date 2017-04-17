@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="de.suitepad.datastore">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+
+    <application
+        android:installLocation="internalOnly"
+        android:label="@string/app_name">
+        <provider
+            android:name=".provider.DataProvider"
+            android:authorities="de.suitepad.datastore.provider"
+            android:exported="true"/>
+
+        <service
+            android:name=".sync.DataSyncService"
+            android:exported="true">
+
+            <!-- It allows the system to launch our sync service as needed. -->
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter"/>
+        </service>
+        <service android:name=".authentication.SuitPadAuthenticatorService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator"/>
+        </service>
+        <service
+            android:name=".DataStoreBindService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+
+    </application>
+
+</manifest>

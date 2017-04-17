@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#0099cc"
+             tools:context="de.suitepad.presentation.SuitePadFrontEndActivity">
+
+
+    <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/webview"
+              android:layout_weight="1"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"></WebView>
+
+    <Button
+        android:id="@+id/toogle_button"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/toogle_button_remote"/>
+    </LinearLayout>

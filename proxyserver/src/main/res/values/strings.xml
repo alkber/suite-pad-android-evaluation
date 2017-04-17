@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Suite Pad Proxy Server</string>
+    <string name="remote_url">https://api.myjson.com/bins/xefof</string>
+    <string name="data_store_bind_service_package">de.suitepad.datastore</string>
+    <string name="data_store_bind_service_qualified_class_name">de.suitepad.datastore.DataStoreBindService</string>
+    <string name="data_store_provider_uri">content://de.suitepad.datastore.provider/</string>
+</resources>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Suitepad Menu UI Webview Application - HTML for WebView</title>
+</head>
+<body>
+<table>
+  <thead>
+    <tr>
+      <th>type</th>
+      <th>name</th>
+      <th>price</th>
+    </tr>
+  </thead>
+  <tbody id="target">
+  </tbody>
+</table>
+
+  <script>
+    var target = document.getElementById('target'),
+        xhReq = new XMLHttpRequest(),
+        serverResponse,
+        jsonResponse,
+        i,j,
+        fields =  ['type', 'name', 'price'];
+    console.log("hello");
+    xhReq.open("GET", "http://localhost:7860/data.json", false);
+    xhReq.send(null);
+
+    serverResponse = xhReq.responseText;
+
+    jsonResponse = JSON.parse(serverResponse);
+
+    for(i in jsonResponse) {
+
+        var row = document.createElement('tr');
+        for(j in fields) {
+
+            var column = document.createElement('td'),
+                columnText = document.createTextNode(jsonResponse[i][fields[j]]);
+
+            column.appendChild(columnText);
+            row.appendChild(column);
+
+        }
+        target.appendChild(row);
+    }
+
+
+
+  </script>
+</body>
+</html>

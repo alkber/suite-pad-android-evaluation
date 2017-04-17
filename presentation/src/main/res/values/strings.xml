@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SuitePad</string>
+    <string name="toogle_button_local">Enable Local</string>
+    <string name="toogle_button_remote">Enable Remote</string>
+    <string name="msg_button_toggle_failed">Failed to toggle mode </string>
+    <string name="msg_please_wait_while">Please wait while data is being loaded...</string>
+
+    <string name="proxy_server_package">de.suitepad.proxyserver</string>
+    <string name="data_store_package">de.suitepad.datastore</string>
+    <string name="proxy_server_qualified_class_name">de.suitepad.proxyserver.ProxyServerBindService</string>
+
+    <string name="home_page_path">file:///android_asset/suitepadhome.html</string>
+    <string name="init_page_path">file:///android_asset/init.html</string>
+    <string name="lost_connection_page_path">file:///android_asset/lost_connection_with_proxy_server.html</string>
+    <string name="ensure_dependency_page_path">file:///android_asset/ensure_dependencies.html</string>
+</resources>
