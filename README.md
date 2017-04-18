@@ -8,7 +8,6 @@ There are 3 components
 * Data Store
 
 Presentation <--[IPC]---> Proxy Server <---[IPC]---> Data Store
- [process A]              [process B]                [process C]                   
 
 There is a separation of concern. Each component only does what it was delegated to do.
 
